@@ -1,1 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Giorgos Marios Dimopoulos — Computer Science & Telecommunications student at the University of Athens. C/C++, Python, cybersecurity.">
+  <meta name="author" content="Giorgos Marios Dimopoulos">
+  <meta property="og:title" content="Giorgos Marios Dimopoulos — Portfolio">
+  <meta property="og:description" content="CS & Telecommunications student @ University of Athens · Cybersecurity">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark light">
+  <script>
+    /* set the theme before first paint so there's no flash */
+    (function () {
+      var t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js"); /* entrance states only apply when JS runs */
+    })();
+  </script>
+  <title>Giorgos Marios Dimopoulos</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0a0a'/><text x='50%25' y='58%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='15' font-weight='700' fill='%23ededed'>gd</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <!-- Top bar: the only liquid-glass surfaces besides buttons -->
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="Back to top">
+      <span class="brand-mark">gd</span>
+      <span class="brand-name">dimopoulos</span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#home" class="nav-link is-active" data-section="home">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#projects" class="nav-link" data-section="projects">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+        <span>Projects</span>
+      </a>
+      <a href="#certificates" class="nav-link" data-section="certificates">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m9 13.5-1.5 7.5L12 18.5l4.5 2.5-1.5-7.5"/></svg>
+        <span>Certificates</span>
+      </a>
+      <a href="#grades" class="nav-link" data-section="grades">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        <span>Grades</span>
+      </a>
+      <a href="#about" class="nav-link" data-section="about">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        <span>About</span>
+      </a>
+    </nav>
+
+    <div class="topbar-actions">
+      <a href="mailto:dimopoulosgiwrgosmarios@gmail.com" class="glass btn topbar-cta">Contact</a>
+      <button type="button" class="glass btn btn-icon theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME ============ -->
+    <section id="home" class="section hero">
+      <p class="eyebrow reveal">Computer Science &amp; Telecommunications · University of Athens</p>
+
+      <h1 class="hero-title reveal">Giorgos Marios <em>Dimopoulos</em></h1>
+      <p class="hero-greek reveal" lang="el">Γιώργος Μάριος Δημόπουλος</p>
+
+      <p class="hero-lede reveal">
+        Second-year student. I write C, C++ and Python, and I spend most of my
+        spare time learning how systems break — and how to keep them from breaking.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="#projects" class="glass btn btn-primary">
+          See my work
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="https://github.com/Mariosdimop" target="_blank" rel="noopener" class="glass btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <dl class="stats reveal">
+        <div class="stat"><dt>Year</dt><dd>2nd</dd></div>
+        <div class="stat"><dt>Average</dt><dd>7.72<small>/10</small></dd></div>
+        <div class="stat"><dt>Languages</dt><dd>C, C++, Python</dd></div>
+        <div class="stat"><dt>Focus</dt><dd>Cybersecurity</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <header class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2>Projects</h2>
+        <p>Things I've built to learn by doing.</p>
+      </header>
+
+      <article class="card project reveal">
+        <div class="project-body">
+          <p class="meta">Python 3 · CLI (bash) · Cybersecurity</p>
+          <h3 class="project-title c-project">python_encryption</h3>
+          <p class="project-desc">
+            A command-line tool that encrypts and decrypts files and entire directory
+            trees using hybrid RSA–AES encryption. Every file gets its own random AES key
+            and nonce; that key is then sealed with an RSA public key. Passwords, keys and
+            counters live in the operating system's vault through <code>keyring</code>,
+            never in plain files.
+          </p>
+
+          <ul class="feature-list">
+            <li>Encrypt / decrypt single files or nested directories</li>
+            <li>Password change without re-encrypting everything</li>
+            <li>“Reboot” option that rotates the RSA key pair</li>
+            <li>Secrets stored in the OS keyring</li>
+          </ul>
+
+          <p class="project-note">
+            A learning project — built to sharpen my Python and security fundamentals,
+            not yet battle-tested for critical data.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://github.com/Mariosdimop/python_encryption" target="_blank" rel="noopener" class="glass btn btn-primary">
+              View repository
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <figure class="scheme" aria-label="Hybrid RSA-AES encryption flow">
+          <figcaption>How a file gets encrypted</figcaption>
+          <ol class="scheme-flow">
+            <li><span class="scheme-num">1</span><div><strong>Generate</strong><span>random AES key + nonce</span></div></li>
+            <li><span class="scheme-num">2</span><div><strong>Encrypt file</strong><span>plaintext → AES → ciphertext</span></div></li>
+            <li><span class="scheme-num">3</span><div><strong>Seal the key</strong><span>AES key → RSA public key → wrapped key</span></div></li>
+            <li><span class="scheme-num">4</span><div><strong>Store secrets</strong><span>password &amp; RSA keys → OS keyring</span></div></li>
+          </ol>
+        </figure>
+      </article>
+
+      <p class="more-soon reveal">
+        More projects in C and C++ from my coursework are on the way —
+        follow along on <a href="https://github.com/Mariosdimop" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section id="certificates" class="section">
+      <header class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2>Certificates</h2>
+        <p>Courses and credentials outside the university curriculum.</p>
+      </header>
+
+      <div class="cert-groups">
+        <div class="cert-group reveal">
+          <h3 class="group-title">Technical</h3>
+          <div class="card cert cert-empty">
+            <p>Technical certifications will be listed here as I complete them.</p>
+          </div>
+        </div>
+
+        <div class="cert-group reveal">
+          <h3 class="group-title">AI</h3>
+          <div class="card cert">
+            <div class="cert-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></svg>
+            </div>
+            <div class="cert-info">
+              <h4>Claude 101</h4>
+              <p class="cert-issuer">Anthropic · Completed</p>
+              <p class="cert-desc">Anthropic's introductory course on working with Claude and using AI assistants effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GRADES ============ -->
+    <section id="grades" class="section">
+      <header class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2>Computer Science Grades</h2>
+        <p>Department of Informatics &amp; Telecommunications, University of Athens. Grades out of 10.</p>
+      </header>
+
+      <div class="grades-layout">
+        <aside class="card gpa reveal">
+          <div class="gpa-ring" style="--value: 77.2">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="52" class="ring-track"/>
+              <circle cx="60" cy="60" r="52" class="ring-fill"/>
+            </svg>
+            <div class="gpa-value">
+              <span class="gpa-number">7.72</span>
+              <span class="gpa-label">Overall</span>
+            </div>
+          </div>
+          <dl class="gpa-facts">
+            <div><dt>Courses graded</dt><dd>9</dd></div>
+            <div><dt>Highest</dt><dd>10 · Logic Design</dd></div>
+            <div><dt>Status</dt><dd>2nd year</dd></div>
+          </dl>
+        </aside>
+
+        <div class="years">
+          <div class="card year reveal">
+            <h3 class="year-title">Year 1</h3>
+            <ul class="grade-list">
+              <li data-grade="8"><span class="course">Linear Algebra</span><span class="bar"><i></i></span><span class="grade">8</span></li>
+              <li data-grade="7"><span class="course">Discrete Mathematics</span><span class="bar"><i></i></span><span class="grade">7</span></li>
+              <li data-grade="7"><span class="course">Intro to Informatics &amp; Telecommunications</span><span class="bar"><i></i></span><span class="grade">7</span></li>
+              <li data-grade="8"><span class="course">Intro to Programming</span><span class="bar"><i></i></span><span class="grade">8</span></li>
+              <li data-grade="10" class="is-top"><span class="course">Logic Design</span><span class="bar"><i></i></span><span class="grade">10</span></li>
+            </ul>
+          </div>
+
+          <div class="card year reveal">
+            <h3 class="year-title">Year 2</h3>
+            <ul class="grade-list">
+              <li data-grade="7"><span class="course">Calculus I</span><span class="bar"><i></i></span><span class="grade">7</span></li>
+              <li data-grade="" class="is-pending"><span class="course">Computer Architecture</span><span class="bar"><i></i></span><span class="grade">—</span></li>
+              <li data-grade="8"><span class="course">Data Structures &amp; Programming Techniques</span><span class="bar"><i></i></span><span class="grade">8</span></li>
+              <li data-grade="6"><span class="course">Electromagnetism, Optics &amp; Modern Physics</span><span class="bar"><i></i></span><span class="grade">6</span></li>
+              <li data-grade="7"><span class="course">Applied Mathematics</span><span class="bar"><i></i></span><span class="grade">7</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <header class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2>About</h2>
+        <p>The short version.</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="card about-bio reveal">
+          <p class="about-lead">
+            I'm Marios, a second-year student in the Department of Informatics &amp;
+            Telecommunications at the National and Kapodistrian University of Athens.
+          </p>
+          <p>
+            What pulls me in most is <strong>cybersecurity</strong> — understanding how
+            data is protected, how encryption actually works under the hood, and what it
+            takes to build software that holds up. My encryption tool started as a way to
+            stop reading about RSA and AES and actually use them. I also like hackathons and
+            startup scalling.
+          </p>
+          <p>
+            Day to day I work in C and C++ for coursework, Python for my own projects,
+            and I live in the Linux terminal and Git.
+          </p>
+        </div>
+
+        <div class="card about-skills reveal">
+          <h3 class="card-label">Skills</h3>
+          <ul class="rows">
+            <li><span class="mono">C</span><em>Coursework</em></li>
+            <li><span class="mono">C++</span><em>Coursework</em></li>
+            <li><span class="mono">Python 3</span><em>Projects</em></li>
+            <li><span class="mono">Linux</span><em>Terminal navigation</em></li>
+            <li><span class="mono">Git &amp; GitHub</span><em>Workflow</em></li>
+          </ul>
+        </div>
+
+        <div class="card about-hackathons reveal">
+          <h3 class="card-label">Hackathons</h3>
+          <ul class="placements">
+            <li>
+              <span class="placement-rank" aria-hidden="true">2</span>
+              <div class="placement-info">
+                <strong>EKPATHON mini</strong>
+                <span>No-AI coding hackathon</span>
+              </div>
+              <span class="placement-result">2nd place</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card about-facts reveal">
+          <h3 class="card-label">General info</h3>
+          <dl class="facts">
+            <div><dt>University</dt><dd>University of Athens (NKUA)</dd></div>
+            <div><dt>Department</dt><dd>Informatics &amp; Telecommunications</dd></div>
+            <div><dt>Year</dt><dd>2nd</dd></div>
+            <div><dt>Interests</dt><dd>Cybersecurity, cryptography</dd></div>
+            <div><dt>Based in</dt><dd>Athens, Greece</dd></div>
+          </dl>
+        </div>
+
+        <div class="card about-contact reveal" id="contact">
+          <h3 class="card-label">Contact</h3>
+          <p>Open to internships, study groups and security projects. The fastest way to reach me is email.</p>
+          <a href="mailto:dimopoulosgiwrgosmarios@gmail.com" class="contact-email">dimopoulosgiwrgosmarios@gmail.com</a>
+          <div class="contact-actions">
+            <button type="button" class="glass btn btn-primary" id="copy-email" data-email="dimopoulosgiwrgosmarios@gmail.com">
+              <span class="btn-label">Copy email</span>
+            </button>
+            <a href="https://github.com/Mariosdimop" target="_blank" rel="noopener" class="glass btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Giorgos Marios Dimopoulos</span>
+    <span class="mono">Athens, Greece</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,3 @@
 # Mariosdimop.github.io
 
-My first repository
+My personal portofolio 
