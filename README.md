@@ -1,3 +1,3 @@
 # Mariosdimop.github.io
 
-My personal portofolio 
+My personal portofolio!
